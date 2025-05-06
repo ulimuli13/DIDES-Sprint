@@ -9,7 +9,7 @@ const Mitte = (p) => {
   p.setup = () => {
     p.createCanvas(p.windowWidth, p.windowHeight);
     p.noFill();
-    p.stroke(247, 208, 255,20);
+    p.stroke(106, 88, 170,150);
     p.strokeWeight(40);
     p.noLoop();  // Animation startet erst nach Delay
 
@@ -46,18 +46,18 @@ const Mitte = (p) => {
   function initDottedCircles() {
     dottedCircles = [
       { offset: 0, minR: -25, maxR: 15, speed: 0.03 },
-      { offset: 1000, minR: -25, maxR: 100, speed: 0.02 },
-      { offset: 2000, minR: -70, maxR: 100, speed: 0.01 },
-      { offset: 3000, minR: 200, maxR: 95, speed: 0.05 },
-      { offset: 1000, minR: 190, maxR: 90, speed: 0.02 },
-      { offset: 2000, minR: 170, maxR: 110, speed: 0.04 },
-      { offset: 3000, minR: 240, maxR: 100, speed: 0.03 },
-      { offset: 1000, minR: 260, maxR: 180, speed: 0.03 },
-      { offset: 2000, minR: 310, maxR: 210, speed: 0.02 },
-      { offset: 3000, minR: 550, maxR: 250, speed: 0.02 },
-      { offset: 1000, minR: 550, maxR: 250, speed: 0.01 },
-      { offset: 1000, minR: 700, maxR: 500, speed: 0.03 },
-      { offset: 3000, minR: 310, maxR: 180, speed: 0.02 }
+      { offset: 800, minR: -25, maxR: 100, speed: 0.02 },
+      { offset: 600, minR: -70, maxR: 100, speed: 0.01 },
+      { offset: 700, minR: 200, maxR: 95, speed: 0.05 },
+      { offset: 900, minR: 190, maxR: 90, speed: 0.02 },
+      { offset: 800, minR: 170, maxR: 110, speed: 0.04 },
+      { offset: 900, minR: 240, maxR: 100, speed: 0.03 },
+      { offset: 700, minR: 260, maxR: 180, speed: 0.03 },
+      { offset: 600, minR: 310, maxR: 210, speed: 0.02 },
+      { offset: 500, minR: 550, maxR: 250, speed: 0.02 },
+      { offset: 700, minR: 550, maxR: 250, speed: 0.01 },
+      { offset: 600, minR: 700, maxR: 500, speed: 0.03 },
+      { offset: 800, minR: 310, maxR: 180, speed: 0.02 }
     ];
 
     dottedCircles.sort((a, b) => {

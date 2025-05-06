@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     border: 0;
-    background-color: rgb(91, 10, 185);
+    background-color: rgb(67, 7, 136);
     font-family: "Oswald", sans-serif;
     overflow: hidden;
   }
@@ -11,7 +11,7 @@ body {
     margin: 0;
     font-size: 30px;
     font-weight: 500;
-    color: rgb(0, 0, 0);
+    color: rgb(253, 255, 190);
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -28,8 +28,8 @@ body {
   }
 
   
-  #canvas-container_Beat, #canvas-container_DottedCircle, #canvas-container_Ende,
-  #canvas-container_Ende_2, #canvas-container_Mitte, #canvas-container_Zwei, #canvas-container_Ringe{
+  #canvas-container_Beat, #canvas-container_DottedCircle, #canvas-container_DottedCircle_2, #canvas-container_Ende,
+  #canvas-container_Ende_2, #canvas-container_Mitte, #canvas-container_Zwei, #canvas-container_Ringe, #canvas-container_Ringe_2{
    position: absolute;
    top: 0;
     left:0;
@@ -44,4 +44,39 @@ body {
     position: fixed;
     top: 0;
     left: 0;
+  }
+
+  .All_Things{
+    opacity: 0;
+    font-size: 20vh;
+    color: rgb(253, 255, 190);
+    font-weight: 900;
+  
+  }
+
+  .visible{
+    opacity: 1;
+  }
+
+  #Titel1{
+    position: absolute;
+    left: 5vw;
+    top: 2vh;
+  }
+  #Titel2{
+    position: absolute;
+    left: 5vw;
+    top: 35%;                     /* von oben zur Hälfte des Viewports */
+  
+  }
+  #Titel3{
+    position: absolute;
+    left: 5vw;
+    bottom: 5vh;
+  }
+  #Titel4{
+    position: absolute;
+    right: 5vw;
+    top: 35%;                    /* von oben zur Hälfte des Viewports */
+  
   }

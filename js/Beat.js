@@ -1,7 +1,7 @@
 const Beat = (p) => {
   let circles = [];
   let lastImpulseTime = 0;
-  let impulseInterval = 799; // alle 800ms
+  let impulseInterval = 800; // alle 800ms
   let startTime = 0;
   let animationEnded = false;
 
@@ -54,8 +54,8 @@ const Beat = (p) => {
 
     display() {
       p.noFill();
-      p.stroke(255, 74, 74, this.opacity);
-      p.strokeWeight(5);
+      p.stroke(185, 232, 120, this.opacity);
+      p.strokeWeight(3);
       p.circle(this.x, this.y, this.size);
     }
 

@@ -11,27 +11,60 @@
 
 
 
-  <h1 id="Titel">All things end</h1>
-  <h1 id="Hozier">Hozier</h1>
+  <h1 id="Titel">Klick to</h1>
+  <h1 id="Hozier">start</h1>
+
+  <div id="Titel1" class="All_Things">All</div>
+  <div id="Titel2" class="All_Things">Things</div>
+  <div id="Titel3" class="All_Things">End</div>
+  <div id="Titel4" class="All_Things">Hozier</div>
+
+
+  <script>
+    function showText(id, delay) {
+      const el = document.getElementById(id);
+      setTimeout(() => {
+        el.classList.add("visible");
+      }, delay);
+    }
+  
+    // Zeitpunkte zum Einblenden (z. B. alle 5 Sekunden nacheinander)
+    showText("Titel1", 26000);   // nach 5 Sekunden
+    showText("Titel2", 26400);  // nach 10 Sekunden
+    showText("Titel3", 26800);  // nach 15 Sekunden
+    showText("Titel4", 27600);  // nach 15 Sekunden
+  
+    // Letzter erscheint bei 20.000 ms → alle sollen 3s später verschwinden
+    setTimeout(() => {
+      const all = document.querySelectorAll(".All_Things");
+      all.forEach(el => el.classList.remove("visible"));
+    }, 31250); // 20000ms + 3000ms = 23000ms
+  </script>
+ 
 
   <!-- p5js Sketches -->
 
-  
+  <div id="canvas-container_Ringe"></div>
+  <div id="canvas-container_Ringe_2"></div>
+  <div id="canvas-container_DottedCircle_2"></div>
   <div id="canvas-container_Beat"></div>
   <div id="canvas-container_Ende_2"></div>
   <div id="canvas-container_Ende"></div>
   <div id="canvas-container_Mitte"></div>
   <div id="canvas-container_Zwei"></div>
   <div id="canvas-container_DottedCircle"></div>
-  <div id="canvas-container_Ringe"></div>
+ 
   
+  <script src="js/Ringe.js"></script>
+  <script src="js/Ringe_2.js"></script>
+  <script src="js/DottedCircle_2.js"></script>
   <script src="js/Beat.js"></script>
   <script src="js/Ende_2.js"></script>
   <script src="js/Ende.js"></script>
   <script src="js/Mitte.js"></script>
   <script src="js/Zwei.js"></script>
   <script src="js/DottedCircle.js"></script>
-  <script src="js/Ringe.js"></script>
+ 
 
 
   <audio id="Song" src="Daten/Hozier - All Things End.wav"></audio>
@@ -40,12 +73,14 @@
 
   <script>
     let DottedCircleSketch;
+    let DottedCircle_2Sketch;
     let BeatSketch;
     let EndeSketch;
     let Ende_2Sketch;
     let MitteSketch;
     let ZweiSketch;
     let RingeSketch;
+    let Ringe_2Sketch;
     let hasStarted = false;
 
     document.body.addEventListener('click', () => {
@@ -54,12 +89,14 @@
         playSong();
 
         DottedCircleSketch = new p5(DottedCircle, 'canvas-container_DottedCircle');
+        DottedCircle_2Sketch = new p5(DottedCircle_2, 'canvas-container_DottedCircle_2');
         BeatSketch = new p5(Beat, 'canvas-container_Beat');
         EndeSketch = new p5(Ende, 'canvas-container_Ende');
         Ende_2Sketch = new p5(Ende_2, 'canvas-container_Ende_2');
         MitteSketch = new p5(Mitte, 'canvas-container_Mitte');
         ZweiSketch = new p5(Zwei, 'canvas-container_Zwei');
         RingeSketch = new p5(Ringe, 'canvas-container_Ringe');
+        Ringe_2Sketch = new p5(Ringe_2, 'canvas-container_Ringe_2');
 
         hasStarted = true; // verhindert doppeltes Starten
 

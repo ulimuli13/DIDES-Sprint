@@ -1,7 +1,7 @@
-const Ringe = (p) => {
+const Ringe_2 = (p) => {
   let circles = [];
   let lastImpulseTime = 0;
-  let impulseInterval = 790; // alle 800ms
+  let impulseInterval = 795; // alle 800ms
   let startTime = 0;
   let animationEnded = false;
   let animationStarted = false;
@@ -25,7 +25,7 @@ const Ringe = (p) => {
     }
 
     // Animation läuft maximal 53 Sekunden ab Beginn der Seite (inkl. Delay)
-    if (elapsed > 52210) {
+    if (elapsed > 32585) {
       animationEnded = true;
     }
 
@@ -53,9 +53,9 @@ const Ringe = (p) => {
       this.x = x;
       this.y = y;
       this.size = startSize;
-      this.opacity = 255;
+      this.opacity = 100;
       this.growthSpeed = 10;
-      this.fadeSpeed = 5;
+      this.fadeSpeed = 2;
     }
 
     update() {
@@ -65,8 +65,8 @@ const Ringe = (p) => {
 
     display() {
       p.noFill();
-      p.stroke(88, 5, 5);
-      p.strokeWeight(5);
+      p.stroke(185, 232, 120);
+      p.strokeWeight(3);
       p.circle(this.x, this.y, this.size);
     }
 

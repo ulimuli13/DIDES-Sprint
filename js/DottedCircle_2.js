@@ -1,4 +1,4 @@
-const DottedCircle = (p) => {
+const DottedCircle_2 = (p) => {
 
   let dottedCircles = [];
   let baseRadius = 150;
@@ -9,8 +9,8 @@ const DottedCircle = (p) => {
   p.setup = () => {
     p.createCanvas(p.windowWidth, p.windowHeight);
     p.noFill();
-    p.stroke(253, 255, 190);
-    p.strokeWeight(3);
+    p.stroke(88, 5, 5,);
+    p.strokeWeight(5);
     p.noLoop();  // Animation startet erst nach Delay
 
     initDottedCircles();
@@ -45,20 +45,20 @@ const DottedCircle = (p) => {
 
   function initDottedCircles() {
     dottedCircles = [
-      { offset: 0, minR: -25, maxR: 45, speed: 0.03 },
-      { offset: 1000, minR: -25, maxR: 100, speed: 0.02 },
-      { offset: 2000, minR: -37, maxR: 60, speed: 0.04 },
-      { offset: 2000, minR: -70, maxR: 100, speed: 0.01 },
-      { offset: 3000, minR: 150, maxR: 95, speed: 0.05 },
-      { offset: 1000, minR: 190, maxR: 90, speed: 0.02 },
-      { offset: 2000, minR: 170, maxR: 110, speed: 0.04 },
-      { offset: 3000, minR: 190, maxR: 100, speed: 0.03 },
-      { offset: 1000, minR: 260, maxR: 180, speed: 0.03 },
-      { offset: 2000, minR: 310, maxR: 210, speed: 0.02 },
-      { offset: 3000, minR: 500, maxR: 250, speed: 0.02 },
-      { offset: 1000, minR: 550, maxR: 250, speed: 0.01 },
-      { offset: 1000, minR: 680, maxR: 500, speed: 0.03 },
-      { offset: 3000, minR: 310, maxR: 180, speed: 0.02 }
+      { offset: 0, minR: -25, maxR: 40, speed: 0.03 },
+      { offset: 700, minR: -25, maxR: 150, speed: 0.02 },
+      { offset: 500, minR: -37, maxR: 80, speed: 0.04 },
+      { offset: 300, minR: -70, maxR: 110, speed: 0.01 },
+      { offset: 300, minR: 150, maxR: 95, speed: 0.05 },
+      { offset: 200, minR: 190, maxR: 90, speed: 0.02 },
+      { offset: 700, minR: 170, maxR: 110, speed: 0.04 },
+      { offset: 500, minR: 190, maxR: 100, speed: 0.03 },
+      { offset: 700, minR: 260, maxR: 180, speed: 0.03 },
+      { offset: 400, minR: 310, maxR: 210, speed: 0.02 },
+      { offset: 900, minR: 500, maxR: 250, speed: 0.02 },
+      { offset: 100, minR: 550, maxR: 250, speed: 0.01 },
+      { offset: 800, minR: 680, maxR: 500, speed: 0.03 },
+      { offset: 300, minR: 310, maxR: 180, speed: 0.02 }
     ];
 
     dottedCircles.sort((a, b) => {

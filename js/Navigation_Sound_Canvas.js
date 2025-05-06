@@ -13,10 +13,10 @@ function moveTexts() {
   const titel = document.getElementById('Titel');
   const hozier = document.getElementById('Hozier');
 
-  titel.style.top = '10px';
+  titel.style.top = '-100px';
   titel.style.transform = 'translate(-50%, 0)';
   hozier.style.top = 'unset';
-  hozier.style.bottom = '10px';
+  hozier.style.bottom = '-100px';
   hozier.style.transform = 'translate(-50%, 0)';
 
   setTimeout(() => {

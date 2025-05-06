@@ -80,3 +80,12 @@ body {
     top: 35%;                    /* von oben zur Hälfte des Viewports */
   
   }
+  @media (max-width: 768px) {
+    .All_Things {
+      font-size: clamp(14px, 6vw, 30px); /* Kleinere Schriftgröße für kleine Bildschirme */
+      position: relative;  /* Relative Positionierung statt absolute */
+      left: 0;
+      right: 0;
+      text-align: center;  /* Zentrierter Text */
+    }
+  }

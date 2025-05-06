@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: rgb(91, 10, 185);
+    font-family: "Oswald", sans-serif;
+    overflow: hidden;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    transition: all 1.2s ease-in-out;
+  }
+
+  #Titel {
+    top: 43%;
+  }
+
+  #Hozier {
+    bottom: 43%;
+  }
+
+  
+  #canvas-container_Beat, #canvas-container_DottedCircle, #canvas-container_Ende,
+  #canvas-container_Ende_2, #canvas-container_Mitte, #canvas-container_Zwei, #canvas-container_Ringe{
+   position: absolute;
+   top: 0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+  }
+
+  
+
+  .canvas{
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
